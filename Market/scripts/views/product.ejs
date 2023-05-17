@@ -1,0 +1,33 @@
+<%- include('header'); -%>
+<link rel="stylesheet" href="/public/css/product.css">
+
+
+<% if (product) { %>
+  <header class="header">
+    <div class="header__in">
+        <div class="logo"><a href="/" class="btn__logo">Market</a></div>
+        <nav>
+          <a href="/confirm/<%= id %>" class="nav__link">Купить</a>
+          <a href="/market" class="nav__link">Назад</a>
+        </nav>
+    </div>
+  </head>
+  <div class="product">
+    <div class="container">
+      <div class="text">
+        <h1 class="color">Название: <%= product.title %></h1>
+        <h2 class="color">Цена: <%= product.price %></h2>
+        <h2 class="color">Описание: <%= product.content %></h2>
+        <h3 class="color">Автор: <a href="/person/<%= person.id %>" class="author__btn"><%= person.login %></a></h3>
+      </div>
+    </div>
+  </div>
+  <% if (product.image) { %>
+    <img src="/scripts/uploads/<%= product.image %>" alt="Изображение товара" class="product__img">
+  <% } %>
+  
+<% } else { %>
+  <p>Товар не найден</p>
+<% } %>
+
+<%- include('footer'); -%>

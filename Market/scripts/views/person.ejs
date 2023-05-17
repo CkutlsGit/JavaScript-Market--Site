@@ -1,0 +1,32 @@
+<%- include('header'); -%>
+<link rel="stylesheet" href="/public/css/person.css">
+
+<% if (person) { %>
+    <header class="header">
+        <div class="container">
+            <div class="header__in">
+                <div><a href="/market" class="market hover">Market</a></div>
+                <nav>
+                    <a href="/get" class="nav__link hover">Пополнить баланс</a>
+                    <a href="/add" class="nav__link hover">Создать объявление</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="info">
+                <h1 class="h1__inf"> <%= person.login %> - Добро пожаловать! </h1>
+                <h2 class="h2__inf">Ваш баланс: <%= person.money %></p>
+            </div>
+        </div>
+    </div>
+    <!--  
+    <h1> <%= person.login %> - Добро пожаловать! </h1>
+    <p>Ваш баланс: <%= person.money %></p>
+    -->
+<% } else { %>
+    <p>Person not found</p>
+<% } %>
+
+<%- include('footer'); -%>

@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+<link rel="stylesheet" href="/public/css/register.css">
+
+<h1>Registration</h1>
+
+
+<div class="container">
+  <div class="content">
+    <form action="/register" method="post">
+      <div class="reg">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" size="50" style="height: 50; font-size: 30px;" required>
+      </div>
+      <div class="password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" size="50" style="height: 50; font-size: 30px;" required>
+      </div>
+      <input type="submit" value="Register" class="reg__input">
+    </form>
+  </div>
+</div>
+
+<%- include('footer'); -%>
+    

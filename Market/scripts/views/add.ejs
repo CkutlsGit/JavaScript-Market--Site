@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+
+
+<% if (person) { %>
+    <h1>Добавление товара</h1>
+
+    <form action="/add" method="POST" enctype="multipart/form-data">
+        <label for="title">Название:</label>
+        <input type="text" name="title" id="title" maxlength="16" required><br><br>
+
+        <label for="price">Цена:</label>
+        <input type="number" name="price" id="price" required><br><br>
+
+        <label for="content">Описание:</label>
+        <textarea name="content" id="content" maxlength="25" required></textarea><br><br>
+
+        <label for="image">Изображение:</label>
+        <input type="file" name="image" id="image"><br><br>
+
+        <input type="submit" value="Добавить товар">
+    </form>
+<% } else { %>
+    <p>Dont Loginned!</p>
+<% } %>
+<%- include('footer'); -%>

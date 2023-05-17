@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+<link rel="stylesheet" href="/public/css/login.css">
+
+<h1 class="login__h1">Login</h1>
+
+<div class="container">
+  <div class="content">
+    <form action="/login" method="post">
+      <div class="login">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" size="50" style="height: 50; font-size: 30px;" required>
+      </div>
+      <div class="password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" size="50" style="height: 50; font-size: 30px;" required>
+      </div>
+      <input type="submit" value="Login" class="login__input">
+      <a href="/register" class="regbtn">Зарегистрироваться</a>
+  </form>
+  </div>
+</div>
+
+
+
+<%- include('footer'); -%>

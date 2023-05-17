@@ -1,0 +1,13 @@
+<%- include('header'); -%>
+<link rel="stylesheet" href="/public/css/money.css">
+
+<div class="content">
+  <div class="container">
+    <form action="/get" method="POST" class="get">
+      <button type="submit">Выдать деньги</button>
+      <a href="/person/<%= person.id %>">Назад</a>
+    </form>
+  </div>
+</div>
+
+<%- include('footer'); -%>

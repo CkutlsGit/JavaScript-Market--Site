@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(121, 143, 143), rgb(202, 147, 156));
+
+    overflow: hidden;
+    line-height: 1.8;
+}
+
+@font-face {
+    font-family: robot_r;
+    src: url(../fonts/RobotoRegular.ttf);
+}
+
+@font-face {
+    font-family: rubic_r;
+    src: url(../fonts/RubicReg.ttf);
+}
+
+@font-face {
+    font-family: rubic_m;
+    src: url(../fonts/RubicMed.ttf);
+}
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: 50px;
+
+    padding-top: 15px;
+}
+
+.header__in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.market {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: rubic_r;
+}
+
+.market:hover {
+    background: linear-gradient(to left, rgb(101, 117, 117), rgb(216, 5, 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav__link {
+    margin: 0 20px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    color: aliceblue;
+    font-size: 32px;
+    font-family: rubic_r;
+}
+
+.hover:hover {
+    background: linear-gradient(to right, rgb(101, 117, 117), rgb(216, 5, 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content {
+    font-family: robot_r;
+    background: linear-gradient(to right, rgb(129, 221, 221), rgb(158, 110, 118));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 15px;
+    font-family: robot_r;
+}
+
+.info h2 {
+    font-size: 40px;
+}

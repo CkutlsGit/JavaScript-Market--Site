@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(103, 150, 150), pink);
+
+    overflow: hidden;
+    line-height: 1.8;
+}
+
+@font-face {
+    font-family: robot_r;
+    src: url(../fonts/RobotoRegular.ttf);
+}
+
+@font-face {
+    font-family: rubic_r;
+    src: url(../fonts/RubicReg.ttf);
+}
+
+@font-face {
+    font-family: rubic_m;
+    src: url(../fonts/RubicMed.ttf);
+}
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 60px;
+    font-family: rubic_m;
+}
+
+.login__h1 {
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(212, 92, 162));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 75px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login label {
+    background: linear-gradient(to left, rgb(4, 255, 255), rgb(82, 167, 236));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.password label {
+    background: linear-gradient(to left, rgb(233, 233, 233), rgb(0, 194, 253));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login__input {
+    color: white;
+    background-color: pink;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 40px;
+    transition: 0.5s ease;
+}
+
+.login__input:hover {
+    background: linear-gradient(to right, rgb(103, 150, 150), pink);
+}
+
+.regbtn {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: palevioletred;
+    transition: 0.5s ease;
+}
+
+.regbtn:hover {
+    background: linear-gradient(to left, rgb(103, 150, 150), palevioletred  );
+}
+

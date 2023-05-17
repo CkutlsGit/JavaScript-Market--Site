@@ -1,0 +1,8 @@
+<h1>Подтверждение покупки</h1>
+<p>Товар: <%= item.title %></p>
+<p>Цена: <%= item.price %> руб.</p>
+
+<form action="/confirm/:id" method="post">
+  <input type="hidden" name="itemId" value="<%= item.id %>">
+  <button type="submit">Подтвердить</button>
+</form>

@@ -1,0 +1,43 @@
+<%- include('header'); -%>
+<link rel="stylesheet" href="/public/css/market.css">
+
+
+<% if (person) { %>
+  <header class="header">
+    <div class="container">
+      <div class="header__in">
+          <div class="logo">Market</div>
+            <nav>
+              <a href="/person/<%= person.id %>" class="nav__link">Профиль: <%= person.login %></a>
+              <a href="/add" class="nav__link">Добавить объявление</a>
+            </nav>
+      </div>
+    </div>
+  </header>
+<% } else { %>
+  <header class="header">
+    <div class="container">
+      <div class="header__in">
+        <nav>
+          <a href="/login" class="nav__link">Войти в профиль</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+<% } %>
+
+
+
+<div class="add__list">
+  <div class="container">
+    <ul class="add">
+      <% market.forEach((item) => { %>
+        <li class="li__list">
+          <a href="/market/<%= item.id %>" class="a__link"><%= item.title %></a>
+          <img src="/scripts/uploads/<%= item.image %>" alt="<%= item.title %>" width="300">
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>
+<%- include('footer'); -%>
